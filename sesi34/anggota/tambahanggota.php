@@ -19,7 +19,7 @@
                 <table class="table">
                     <tr>
                         <td><label for="nama">Nama:</label></td>
-                        <td><input type="text" class="form-control" id="nama" name="nama" required="" autocomplete="off"></td>
+                        <td><input type="text" class="form-control" id="nama" name="nama" required="" autocomplete="off" oninput="checkForm()"></td>
                     </tr>
                     <tr>
                         <td><label for="sex">Jenis Kelamin:</label></td>
@@ -36,15 +36,15 @@
                     </tr>
                     <tr>
                         <td><label for="alamat">Alamat:</label></td>
-                        <td><input type="text" class="form-control" id="alamat" name ="alamat" required=" s"autocomplete="off"></td>
+                        <td><input type="text" class="form-control" id="alamat" name="alamat" required=" s"autocomplete="off" oninput="checkForm()"></td>
                     </tr>
                     <tr>
                         <td><label for="username">Username:</label></td>
-                        <td><input type="text" class="form-control" id="username" name="username" required=" "autocomplete="off"></td>
+                        <td><input type="text" class="form-control" id="username" name="username" required=" "autocomplete="off" oninput="checkForm()"></td>
                     </tr>
                     <tr>
                         <td><label for="email">Email:</label></td>
-                        <td><input type="email" class="form-control" id="email" name="email" required="" autocomplete="off"></td>
+                        <td><input type="email" class="form-control" id="email" name="email" required="" autocomplete="off" oninput="checkForm()"></td>
                     </tr>
                     <tr>
                         <td><label for="role">Role:</label></td>
@@ -62,13 +62,31 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="submit" class="btn btn-primary">Tambah Anggota</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Tambah Anggota</button>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function checkForm() {
+            var nama = document.getElementById('nama').value;
+            var alamat = document.getElementById('alamat').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var submitBtn = document.getElementById('submitBtn');
+
+            if (nama.trim() !== '' && alamat.trim() !== '' && username.trim() !== '' && email.trim() !== '') {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+    </script>
 </body>
 </html>

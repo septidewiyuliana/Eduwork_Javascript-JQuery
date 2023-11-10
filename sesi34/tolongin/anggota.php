@@ -6,9 +6,9 @@ $query = mysqli_query($conn, "SELECT * FROM anggota");
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@ $query = mysqli_query($conn, "SELECT * FROM anggota");
             <a href= "anggota.php">Anggota</a> |
             <a href= "peminjaman.php">Peminjaman</a> |
         </div>
-        <table id="MytableAnggota" class="table">
+        <table id = #MytableAnggota class="table">
             <thead>
                 <tr>
                     <th>No</th>
@@ -73,10 +73,8 @@ $query = mysqli_query($conn, "SELECT * FROM anggota");
 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
-         $(document).ready(function () {
-       $('#MytableAnggota').DataTable();
-   });
-</script>
-
+        $(document).ready(function () {
+            $('#myTableBuku, MytableAnggota, MyTablePeminjaman').DataTable();
+        });
     </script></body>
 </html>
