@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pelita</td>
+            <td>24</td>
+            <td>Bandung</td>
+        </tr>
+        <tr>
+            <td>Najmina</td>
+            <td>20</td>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <td>Nur</td>
+            <td>19</td>
+            <td>Yogyakarta</td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
+</body>
+
+</html>
